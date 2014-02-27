@@ -16,7 +16,8 @@ public class HelloServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         LOG.info("About to greet " + name);
-        response.getWriter().println("Hello, " + name + "!");
+        GreetingHelper helper = new GreetingHelper(name);
+        response.getWriter().println(helper.createGreeting());
     }
 
 }
