@@ -36,6 +36,30 @@
         </plugins>
     </build>
 
+    <profiles>
+        <profile>
+            <id>tomcat</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>tomcat-maven-plugin</artifactId>
+                        <version>1.1</version>
+                        <executions>
+                            <execution>
+                                <id>run</id>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                                <phase>package</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -52,6 +76,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.5.2</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
