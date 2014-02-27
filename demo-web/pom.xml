@@ -9,7 +9,7 @@
         <artifactId>demo-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>demo-webapp</artifactId>
+    <artifactId>demo-web</artifactId>
     <packaging>war</packaging>
 
     <build>
